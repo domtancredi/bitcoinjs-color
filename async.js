@@ -84,7 +84,7 @@ function setOrderedTxColors(err,orderedTx){
 }
 
 function orderBasedInputMergeByOutput(tx,callback){
-  // console.log('5: orderBasedInputMergeByOutput [begin]:', tx);
+  console.log('5: orderBasedInputMergeByOutput [begin]:', tx);
   
 	var orderedTx = {out:[]}
   	, appetite = 0
@@ -114,14 +114,14 @@ function orderBasedInputMergeByOutput(tx,callback){
 }
 
 function getTx(txId,callback){
-  // console.log('2: getTx [begin]: ' + txId);
+  console.log('2: getTx [begin]: ' + txId);
   
   xhr = new XMLHttpRequest();
   xhr.open('GET', 'http://localhost:3333/json/tx/'+txId, true);
   xhr.onreadystatechange = function(e) {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        // console.log('3: getTx [json response]: ' + xhr.responseText);
+        console.log('3: getTx [json response]: ' + xhr.responseText);
         var data = JSON.parse(xhr.responseText);
         var err = "none";
         // console.log('4: getTx [grabbed]: ' + data.hash);

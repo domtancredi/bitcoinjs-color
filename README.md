@@ -1,6 +1,15 @@
 Bitcoinjs-color
 ===============
 
+Steps to Setup and Run a Script:
+
+    1. make sure the mongo daemon is running (i.e. 'mongod')
+    2. run the bitcoinjs-color server (i.e. bitcoinjs run)
+    3. run the bitcoinjs-color query (i.e. node app.js)
+    4. open a seperate terminal within the project 
+    5. run the javascript test (i.e. node async.js)
+    
+
 Based on: https://github.com/bitcoinjs/node-bitcoin-explorer
 
 Tool to check colored bitcoin on bitcoinjs
@@ -57,3 +66,8 @@ Running
 
     bitcoinjs start
     node app.js
+    
+Running bitcoin-tx-spent-db
+  1. kick off mongo daemon (anywhere): "run mongod" 
+  2. setup bitcoinjs-server (in bitcoinjs-color): "node app.js"
+  2. initialize db (in bitcoin-tx-spent-db), "node app.js create"

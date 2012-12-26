@@ -79,6 +79,8 @@ function formatTx(tx) {
         { sourceAddr : Util.pubKeyHashToAddress(txin.source.getScript().simpleOutPubKeyHash())
         , value : Util.formatValue(txin.source.v)
         , prev_tx : standard.in[j].prev_out.hash
+        , outIndex : txin.getOutpointIndex()
+        , n : standard.in[j].prev_out.n
         }
       )
     }
